@@ -121,7 +121,7 @@
           if (row > -1) {
             div = document.createElement('div');
             div.className = 'btn';
-            div.appendChild(document.createTextNode('x'));
+            div.appendChild(document.createTextNode('✕'));
             elem.appendChild(div);
 
             eventManager.addEventListener(div, 'mouseup', function () {
