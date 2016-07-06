@@ -4022,7 +4022,7 @@ var WalkontableViewport = function WalkontableViewport(wotInstance) {
     return this.columnHeaderHeight;
   },
   getViewportHeight: function() {
-    var containerHeight = this.getWorkspaceHeight();
+    var containerHeight = Infinity; //this.getWorkspaceHeight();
     var columnHeaderHeight;
     if (containerHeight === Infinity) {
       return containerHeight;
