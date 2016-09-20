@@ -58,9 +58,9 @@
 
     var checkRowHeader = function (element) {
       if (element.tagName != 'BODY') {
-        if (element.parentNode.tagName == 'TBODY') {
+        if (element.parentNode && element.parentNode.tagName == 'TBODY') {
           return true;
-        } else {
+        } else if (element.parentNode) {
           element = element.parentNode;
           return checkRowHeader(element);
         }
