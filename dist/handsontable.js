@@ -16350,10 +16350,11 @@ var $ManualColumnResize = ManualColumnResize;
   checkIfColumnHeader: function(element) {
     if (element != this.hot.rootElement) {
       var parent = element.parentNode;
-      if (parent.tagName === 'THEAD') {
+      if (parent && parent.tagName === 'THEAD') {
         return true;
+      } else if (parent) {
+        return this.checkIfColumnHeader(parent);
       }
-      return this.checkIfColumnHeader(parent);
     }
     return false;
   },
